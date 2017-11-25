@@ -178,7 +178,7 @@
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="@android:color/white"/>
+                android:background="@android:color/white" />
 
             <TableRow>
 
@@ -211,7 +211,7 @@
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="@android:color/white"/>
+                android:background="@android:color/white" />
 
             <TableRow>
 
@@ -244,7 +244,7 @@
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="@android:color/white"/>
+                android:background="@android:color/white" />
 
             <TableRow>
 
@@ -282,8 +282,8 @@
             android:layout_height="60dp"
             android:layout_below="@+id/tabelIDPel"
             android:layout_marginTop="25dp"
-            android:onClick="activityTambahIDPel"
             android:background="@android:color/holo_blue_light"
+            android:onClick="activityTambahIDPel"
             android:text="Tambah ID Pelanggan"
             android:textColor="@android:color/white"
             android:textSize="16sp"
@@ -291,36 +291,36 @@
 
     </RelativeLayout>
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/floatButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="20dp"
-        android:backgroundTint="@android:color/holo_orange_dark"
-        app:srcCompat="@drawable/fa_add_64_white" />
+    <!--<android.support.design.widget.FloatingActionButton-->
+        <!--android:id="@+id/floatButton"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="bottom|end"-->
+        <!--android:layout_margin="20dp"-->
+        <!--android:backgroundTint="@android:color/holo_orange_dark"-->
+        <!--app:srcCompat="@drawable/fa_add_64_white" />-->
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/floatEdit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_marginEnd="80dp"
-        android:layout_marginBottom="20dp"
-        android:tooltipText="Edit Profil"
-        android:visibility="invisible"
-        app:srcCompat="@drawable/fa_edit_64_white" />
+    <!--<android.support.design.widget.FloatingActionButton-->
+        <!--android:id="@+id/floatEdit"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="bottom|end"-->
+        <!--android:layout_marginBottom="20dp"-->
+        <!--android:layout_marginEnd="80dp"-->
+        <!--android:tooltipText="Edit Profil"-->
+        <!--android:visibility="invisible"-->
+        <!--app:srcCompat="@drawable/fa_edit_64_white" />-->
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/floatLogout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="80dp"
-        android:tooltipText="Logout"
-        android:visibility="invisible"
-        android:backgroundTint="@android:color/holo_red_dark"
-        app:srcCompat="@drawable/fa_logout_64_white" />
+    <!--<android.support.design.widget.FloatingActionButton-->
+        <!--android:id="@+id/floatLogout"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="bottom|end"-->
+        <!--android:layout_marginBottom="80dp"-->
+        <!--android:layout_marginEnd="20dp"-->
+        <!--android:backgroundTint="@android:color/holo_red_dark"-->
+        <!--android:tooltipText="Logout"-->
+        <!--android:visibility="invisible"-->
+        <!--app:srcCompat="@drawable/fa_logout_64_white" />-->
 
 </android.support.design.widget.CoordinatorLayout>

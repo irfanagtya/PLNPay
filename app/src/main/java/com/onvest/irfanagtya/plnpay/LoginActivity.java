@@ -14,6 +14,7 @@ import android.widget.Toast;
 import com.onvest.irfanagtya.plnpay.model.request.LoginRequest;
 import com.onvest.irfanagtya.plnpay.model.response.LoginResponse;
 import com.onvest.irfanagtya.plnpay.network.RestService;
+import com.onvest.irfanagtya.plnpay.utils.PrefManager;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -27,7 +28,7 @@ public class LoginActivity extends AppCompatActivity {
     EditText emailLogin, pwdLogin;
     ProgressBar progressBar;
     RestService restService;
-    SharedPrefManager prefManager;
+    PrefManager prefManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +39,11 @@ public class LoginActivity extends AppCompatActivity {
         pwdLogin = findViewById(R.id.pwdLogin);
         progressBar = findViewById(R.id.progressBar);
         restService = new RestService();
-        prefManager = new SharedPrefManager(this);
+        prefManager = new PrefManager(this);
+
+        if (prefManager.isLoggedIn()) {
+            startActivity(new Intent(this, HomeActivity.class));
+        }
 
 
         //if user presses on login
@@ -92,7 +97,7 @@ public class LoginActivity extends AppCompatActivity {
                 User user = new User(response.getUser().getIdUser(), response.getUser().getName(),
                         response.getUser().getPhone(), response.getUser().getEmail(),
                         response.getUser().getRef());
-                prefManager.userLogin(user);
+                prefManager.saveUser(user);
                 prefManager.setLogin(true);
                 progressBar.setVisibility(View.GONE);
                 startActivity(new Intent(LoginActivity.this, HomeActivity.class));

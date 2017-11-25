@@ -17,11 +17,6 @@
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-
-                <data
-                    android:host="irfanagtya.onevest.com"
-                    android:pathPattern="/.*"
-                    android:scheme="https" />
             </intent-filter>
         </activity>
         <activity android:name=".HomeActivity">
@@ -37,98 +32,14 @@
                     android:scheme="https" />
             </intent-filter>
         </activity>
-        <activity android:name=".IdCekActivity">
-            <intent-filter android:order="1">
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.BROWSABLE" />
-                <category android:name="android.intent.category.DEFAULT" />
-
-                <data
-                    android:host="irfanagtya.onevest.com"
-                    android:pathPattern="/.*"
-                    android:scheme="https" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".PayActivity">
-            <intent-filter android:order="1">
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.BROWSABLE" />
-                <category android:name="android.intent.category.DEFAULT" />
-
-                <data
-                    android:host="irfanagtya.onevest.com"
-                    android:pathPattern="/.*"
-                    android:scheme="https" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".ProcessActivity">
-            <intent-filter android:order="1">
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.BROWSABLE" />
-                <category android:name="android.intent.category.DEFAULT" />
-
-                <data
-                    android:host="irfanagtya.onevest.com"
-                    android:pathPattern="/.*"
-                    android:scheme="https" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".IdCekActivity" />
+        <activity android:name=".PayActivity" />
+        <activity android:name=".ProcessActivity" />
         <activity android:name=".RegisterActivity" />
-        <activity android:name=".ProfilActivity">
-            <intent-filter android:order="1">
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.BROWSABLE" />
-                <category android:name="android.intent.category.DEFAULT" />
-
-                <data
-                    android:host="irfanagtya.onevest.com"
-                    android:pathPattern="/.*"
-                    android:scheme="https" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".DoneActivity">
-            <intent-filter android:order="1">
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.BROWSABLE" />
-                <category android:name="android.intent.category.DEFAULT" />
-
-                <data
-                    android:host="irfanagtya.onevest.com"
-                    android:pathPattern="/.*"
-                    android:scheme="https" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".VerifyActivity">
-            <intent-filter android:order="1">
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.BROWSABLE" />
-                <category android:name="android.intent.category.DEFAULT" />
-
-                <data
-                    android:host="irfanagtya.onevest.com"
-                    android:pathPattern="/.*"
-                    android:scheme="https" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".TambahIDPelActivity">
-            <intent-filter android:order="1">
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.BROWSABLE" />
-                <category android:name="android.intent.category.DEFAULT" />
-
-                <data
-                    android:host="irfanagtya.onevest.com"
-                    android:pathPattern="/.*"
-                    android:scheme="https" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".ProfilActivity" />
+        <activity android:name=".DoneActivity" />
+        <activity android:name=".VerifyActivity" />
+        <activity android:name=".TambahIDPelActivity" />
     </application>
 
 </manifest>

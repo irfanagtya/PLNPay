@@ -12,29 +12,50 @@ public class User {
     private int id_user, kode_ref;
 
     public User(int id_user, String nama_lengkap, String no_hp, String email, int kode_ref) {
-
+        this.nama_lengkap = nama_lengkap;
+        this.no_hp = no_hp;
+        this.email = email;
+        this.id_user = id_user;
+        this.kode_ref = kode_ref;
     }
 
-    public User(int id_user, String nama_lengkap, String no_hp, String email) {
-    }
-
-    public int getIdUser() {
-        return id_user;
-    }
-
-    public String getNamaLengkap() {
+    public String getNama_lengkap() {
         return nama_lengkap;
     }
 
-    public String getNoHP() {
+    public void setNama_lengkap(String nama_lengkap) {
+        this.nama_lengkap = nama_lengkap;
+    }
+
+    public String getNo_hp() {
         return no_hp;
+    }
+
+    public void setNo_hp(String no_hp) {
+        this.no_hp = no_hp;
     }
 
     public String getEmail() {
         return email;
     }
 
-    public int getKodeRef() {
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public int getId_user() {
+        return id_user;
+    }
+
+    public void setId_user(int id_user) {
+        this.id_user = id_user;
+    }
+
+    public int getKode_ref() {
         return kode_ref;
+    }
+
+    public void setKode_ref(int kode_ref) {
+        this.kode_ref = kode_ref;
     }
 }

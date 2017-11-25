@@ -1,0 +1,70 @@
+<resources>
+
+    <string name="app_name">PLN Pay</string>
+    <!-- Button -->
+    <string name="login_button">Login</string>
+    <string name="daftar_button">Daftar</string>
+    <string name="login_text_button"><u>Sudah terdaftar? Login disini</u></string>
+    <string name="daftar_text_button"><u>Belum terdaftar? Daftar disini</u></string>
+    <string name="logout_button">Logout</string>
+    <string name="next_button">Lanjutkan</string>
+    <string name="topup_button">Top Up</string>
+    <string name="bayar_button">Bayar</string>
+
+    <!-- Input -->
+    <string name="name_input">Nama Lengkap</string>
+    <string name="hp_input">Nomor HP</string>
+    <string name="mail_input">Email</string>
+    <string name="pwd_input">Password</string>
+    <string name="ref_input">Kode Referensi</string>
+    <string name="kb_input">Kode Bayar</string>
+    <string name="idpel_input">ID Pelanggan</string>
+    <string name="almt_input">Alamat</string>
+
+    <!-- Content -->
+    <string name="idpel_title">ID Pelanggan</string>
+    <string name="almt_title">Alamat</string>
+    <string name="user_title">User ID</string>
+    <string name="name_title">Nama</string>
+    <string name="hp_title">Nomor HP</string>
+    <string name="mail_title">Email</string>
+
+    <!-- Bullet Number -->
+    <string name="bullet1">❶</string>
+    <string name="bullet2">❷</string>
+    <string name="bullet3">❸</string>
+    <string name="bullet4">❹</string>
+    <string name="bullet5">❺</string>
+
+    <!-- Paragraph -->
+    <string name="payment_desc">
+        Kunjungi ATM yang anda pilih atau <b>ATM Bersama/Prima</b>\nPilih menu <b>Transfer</b>\nPilih <b>Bank OCBC NISP</b> atau cantumkan kode bank <b>028</b>\nMasukkan nomor <b>Virtual Account</b> diatas\nMasukkan <b>Nominal Pembayaran</b>
+    </string>
+
+    <string name="num_pay_desc">
+        <b>❶</b>\n\n<b>❷</b>\n<b>❸</b>\n\n<b>❹</b>\n<b>❺</b>
+    </string>
+    <string name="title_activity_bottom">BottomActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+    <!-- Spinner Array -->
+    <array name="topupSpinner">
+        <item>20.000</item>
+        <item>25.000</item>
+        <item>50.000</item>
+        <item>75.000</item>
+        <item>100.000</item>
+        <item>200.000</item>
+        <item>500.000</item>
+        <item>1.000.000</item>
+    </array>
+
+    <array name="idpelIrfanSpinner">
+        <item>012345678910</item>
+        <item>012345678911</item>
+        <item>012345678912</item>
+        <item>012345678913</item>
+    </array>
+</resources>

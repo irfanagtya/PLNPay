@@ -4,6 +4,7 @@ import android.util.Log;
 
 import com.google.gson.Gson;
 import com.onvest.irfanagtya.plnpay.model.request.LoginRequest;
+import com.onvest.irfanagtya.plnpay.model.request.SignupRequest;
 import com.onvest.irfanagtya.plnpay.model.response.LoginResponse;
 
 import okhttp3.OkHttpClient;
@@ -44,6 +45,23 @@ public class RestService {
             public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
                 if (response.isSuccessful()) {
                     Log.d(TAG, response.body().toString());
+                    callback.onSuccess(response.body());
+                }
+            }
+
+            @Override
+            public void onFailure(Call<LoginResponse> call, Throwable t) {
+
+            }
+        });
+    }
+
+    public void signup(final PlnCallback<LoginResponse> callback, SignupRequest request) {
+        networkService.signup(request.getName(), request.getPhone(), request.getEmail(),
+                request.getPassword(), request.getRef()).enqueue(new Callback<LoginResponse>() {
+            @Override
+            public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
+                if (response.isSuccessful()) {
                     callback.onSuccess(response.body());
                 }
             }

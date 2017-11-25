@@ -54,9 +54,8 @@ public class LoginActivity extends AppCompatActivity {
         findViewById(R.id.registerTextButton).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //open register screen
-                finish();
-                startActivity(new Intent(getApplicationContext(), RegisterActivity.class));
+                Log.d(TAG, "register clicked");
+                startActivity(new Intent(LoginActivity.this, RegisterActivity.class));
             }
         });
     }

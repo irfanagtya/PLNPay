@@ -5,10 +5,16 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
+
+import com.onvest.irfanagtya.plnpay.model.request.SignupRequest;
+import com.onvest.irfanagtya.plnpay.model.response.LoginResponse;
+import com.onvest.irfanagtya.plnpay.network.NetworkService;
+import com.onvest.irfanagtya.plnpay.network.RestService;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -17,19 +23,18 @@ import java.util.HashMap;
 
 public class RegisterActivity extends AppCompatActivity {
 
-    EditText nameReg, hpReg, emailReg, pwdReg,refReg;
+    private static final String TAG = RegisterActivity.class.getSimpleName();
+
+    EditText nameReg, hpReg, emailReg, pwdReg, refReg;
+    RestService restService;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+        restService = new RestService();
 
         //if the user is already logged in we will directly start the profile activity
-        if (SharedPrefManager.getInstance(this).isLoggedIn()) {
-            finish();
-            startActivity(new Intent(this, HomeActivity.class));
-            return;
-        }
 
         nameReg = (EditText) findViewById(R.id.nameReg);
         hpReg = (EditText) findViewById(R.id.hpReg);
@@ -101,6 +106,21 @@ public class RegisterActivity extends AppCompatActivity {
             refReg.requestFocus();
             return;
         }
+
+        SignupRequest request = new SignupRequest(nama_lengkap, no_hp, email, password,
+                Integer.valueOf(kode_ref));
+        restService.signup(new RestService.PlnCallback<LoginResponse>() {
+            @Override
+            public void onSuccess(LoginResponse response) {
+                Log.d(TAG, "registered" + response );
+                finish();
+            }
+
+            @Override
+            public void onError(int errorCode) {
+
+            }
+        }, request);
 
         //if it passes all the validations
 //        class RegisterUser extends AsyncTask<Void, Void, String> {

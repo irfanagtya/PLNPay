@@ -15,4 +15,10 @@ public interface NetworkService {
     @FormUrlEncoded
     @POST("api.php?apicall=login")
     Call<LoginResponse> login(@Field("email") String email, @Field("password") String password);
+
+    @FormUrlEncoded
+    @POST("api.php?apicall=signup")
+    Call<LoginResponse> signup(@Field("nama_lengkap") String name, @Field("no_hp") String phone,
+                               @Field("email") String email, @Field("password") String password,
+                               @Field("kode_ref") int ref);
 }

@@ -160,45 +160,183 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="60dp">
+        android:layout_marginTop="60dp"
+        android:padding="10dp">
 
-        <LinearLayout
-            android:id="@+id/payContainer"
+        <FrameLayout
+            android:id="@+id/idVerify"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:layout_weight="1"
             android:padding="10dp">
 
-            <FrameLayout
-                android:id="@+id/idVerify"
+            <TableLayout
+                android:id="@+id/idCekDesc"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:layout_weight="1">
+                android:layout_height="match_parent">
 
-            </FrameLayout>
+                <TableRow>
 
-            <ExpandableListView
-                android:id="@+id/choosePay"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="5dp"
+                        android:text="ID Pel"
+                        android:textColor="@android:color/holo_blue_light"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
 
-            </ExpandableListView>
+                    <TextView
+                        android:id="@+id/dataPayIDPel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="7"
+                        android:padding="5dp"
+                        android:text="ID Pel"
+                        android:textSize="16sp" />
 
-            <Button
-                android:id="@+id/nextButton"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_margin="10dp"
-                android:layout_weight="1"
-                android:background="@android:color/holo_blue_light"
-                android:text="Lanjutkan"
-                android:textColor="@android:color/white"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                android:onClick="activityProcess"/>
+                </TableRow>
 
-        </LinearLayout>
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="5dp"
+                        android:text="Tipe"
+                        android:textColor="@android:color/holo_blue_light"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/dataPayTipe"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="7"
+                        android:padding="5dp"
+                        android:text="Tipe"
+                        android:textSize="16sp" />
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="5dp"
+                        android:text="Tarif / Daya"
+                        android:textColor="@android:color/holo_blue_light"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/dataPayTarifDaya"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="7"
+                        android:padding="5dp"
+                        android:text="Tarif / Daya"
+                        android:textSize="16sp" />
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="5dp"
+                        android:text="Nama"
+                        android:textColor="@android:color/holo_blue_light"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/dataPayName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="7"
+                        android:padding="5dp"
+                        android:text="Nama"
+                        android:textSize="16sp" />
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="5dp"
+                        android:text="Alamat"
+                        android:textColor="@android:color/holo_blue_light"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/dataPayAlamat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="7"
+                        android:padding="5dp"
+                        android:text="Alamat"
+                        android:textSize="16sp" />
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/dataPayTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="5dp"
+                        android:text="Tagihan"
+                        android:textColor="@android:color/holo_blue_light"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/dataPayJumlah"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="7"
+                        android:padding="5dp"
+                        android:text="Tagihan"
+                        android:textSize="16sp" />
+
+                </TableRow>
+
+            </TableLayout>
+
+        </FrameLayout>
+
+        <ExpandableListView
+            android:id="@+id/choosePay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/idVerify"/>
+
+        <Button
+            android:id="@+id/nextButton"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_margin="10dp"
+            android:layout_below="@+id/choosePay"
+            android:background="@android:color/holo_blue_light"
+            android:onClick="activityProcess"
+            android:text="Lanjutkan"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
     </RelativeLayout>
 
 </android.support.constraint.ConstraintLayout>
